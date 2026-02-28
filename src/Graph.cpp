@@ -1,17 +1,10 @@
 #include "../include/Graph.h"
-#include <cmath>
+#include "../include/Utils.h"
 #include <algorithm>
 
 using namespace std;
 
 Graph::Graph() {}
-
-int Graph::calDistance(const City& a, const City& b) const {
-    int dx = a.getX() - b.getX();
-    int dy = a.getY() - b.getY();
-
-    return (int)round(sqrt(dx * dx + dy * dy));
-}
 
 void Graph::build(const vector<City>& cityList, const vector<Edge>& edgeList) {
 
@@ -58,7 +51,7 @@ bool Graph::addEdge(int u, int v) {
     if (!hasCity(u) || !hasCity(v))
         return false;
 
-    int w = calDistance(cities[u], cities[v]);
+    int w = Utils::calDistance(cities[u], cities[v]);
 
     adj[u].push_back({v, w});
     adj[v].push_back({u, w});

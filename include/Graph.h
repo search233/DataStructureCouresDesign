@@ -3,6 +3,7 @@
 
 #include "City.h"
 #include "Edge.h"
+#include "Utils.h"
 #include <unordered_map>
 #include <vector>
 #include <optional>
@@ -14,11 +15,7 @@ private:
     std::unordered_map<int, City> cities;
 
     // id -> [(neighbor, weight)]
-    std::unordered_map<int,
-        std::vector<std::pair<int,int>>> adj;
-
-    int calDistance(const City& a,
-                        const City& b) const;
+    std::unordered_map<int, std::vector<std::pair<int,int>>> adj;
 
 public:
     Graph();

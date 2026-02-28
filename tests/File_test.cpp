@@ -1,4 +1,5 @@
 #include "../include/FileManager.h"
+#include "../include/Utils.h"
 #include <iostream>
 
 using namespace std;
@@ -60,6 +61,24 @@ int main() {
     }
 
     printCities(dm);
+
+    // demonstrate utility distance calculation
+    if (dm.getCities().size() >= 2) {
+        auto& c1 = dm.getCities()[0];
+        auto& c2 = dm.getCities()[1];
+        cout << "\n[3.a] Utility distance between city 0 and 1: "
+             << Utils::calculateDistance(c1, c2) << "\n";
+    }
+
+    // additional util function demos
+    cout << "[3.b] split(\"a,b,c\", ','): ";
+    auto parts = Utils::split("a,b,c", ',');
+    for (auto &p : parts) cout << p << " ";
+    cout << "\n";
+
+    cout << "[3.c] isInteger tests: \"123\" -> " << Utils::isInteger("123")
+         << ", \"-45\" -> " << Utils::isInteger("-45")
+         << ", \"12a3\" -> " << Utils::isInteger("12a3") << "\n";
 
     // ---------- Add Edge ----------
     cout << "\n[4] Adding edges...\n";

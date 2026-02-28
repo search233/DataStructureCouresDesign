@@ -1,0 +1,3 @@
+/home/yangz/Projects/DataStructureCouresDesign/build/CMakeFiles/network.dir
+/home/yangz/Projects/DataStructureCouresDesign/build/CMakeFiles/edit_cache.dir
+/home/yangz/Projects/DataStructureCouresDesign/build/CMakeFiles/rebuild_cache.dir
