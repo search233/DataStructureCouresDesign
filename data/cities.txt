@@ -1,0 +1,2 @@
+1|Beijing|10|20|Capital
+2|Shanghai|35|45|FinancialCenter

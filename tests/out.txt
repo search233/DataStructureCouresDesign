@@ -1,0 +1,58 @@
+===== Data Layer Test Start =====
+
+[1] Loading existing data...
+
+=== Cities ===
+1 Beijing (10,20) Capital
+2 Shanghai (35,45) FinancialCenter
+
+=== Edges ===
+2 <-> 3
+
+[2] Adding cities...
+
+[2.a] Attempting to add duplicates (should be ignored)...
+
+=== Cities ===
+1 Beijing (10,20) Capital
+2 Shanghai (35,45) FinancialCenter
+3 Shenzhen (50,60) Tech
+
+[3] Modifying city id=2...
+
+=== Cities ===
+1 Beijing (10,20) Capital
+2 Shanghai (35,45) FinancialCenter
+3 Shenzhen (50,60) Tech
+
+[4] Adding edges...
+
+[4.a] Attempting to add duplicate edges (should be ignored)...
+
+=== Edges ===
+2 <-> 3
+1 <-> 2
+
+[5] Removing city id=3...
+
+=== Cities ===
+1 Beijing (10,20) Capital
+2 Shanghai (35,45) FinancialCenter
+
+[6] Removing edge 1-2...
+
+=== Edges ===
+2 <-> 3
+
+[7] Saving to files...
+
+[8] Reloading verification...
+
+=== Cities ===
+1 Beijing (10,20) Capital
+2 Shanghai (35,45) FinancialCenter
+
+=== Edges ===
+2 <-> 3
+
+===== TEST FINISHED =====
